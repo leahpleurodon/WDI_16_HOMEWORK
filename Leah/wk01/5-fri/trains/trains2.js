@@ -1,6 +1,6 @@
 var trainStations = {
-  "Alamein":["Southern Cross", "Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn","Glenferrie"],
-  "Glen Waverly":["Flinders Street", "Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"],
+  "Alamein":["Flinders Street", "Richmond", "East Richmond", "Burnley", "Hawthorn","Glenferrie"],
+  "Glen Waverly":["Flagstaff", "Melbourne Central", "Parliament", "Richmond", "Kooyong", "Tooronga"],
   "Sandringham":["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"]
 };
 
@@ -76,6 +76,17 @@ var oneLineTravel = function (line, start, end){
 };
 
 
+var getInterchage = function(startLine,endLine){
+  var startLineStations = trainStations[startLine];
+  var endLineStations = trainStations[endLine];
+  var interChangeStations = getCommonValues(startLineStations,endLineStations);
+  if(interChangeStations.length < 1){
+    return "Catch the bus"
+  }else{
+    return interChangeStations[0];
+  };
+};
+    
 var planner = function(startStation, endStation){
   if(validStations(startStation, endStation) === false){
     return "Please select a valid journey route";
@@ -87,16 +98,11 @@ var planner = function(startStation, endStation){
   if (commonLines.length > 0){
     return oneLineTravel(commonLines[0], startStation, endStation);
   }else{
-    return "edge case";
-    //else
-      //first trip
-        //one train line
-        //direcitonal arrows
-        //directions in english
-      //new trip
+    var interChangeStation = getInterchage(startLines[0],endLines[0]);
+
+    return oneLineTravel(startLines[0], startStation, interChangeStation) + "\nChange to the " + endLines[0] +  " line.\n" + oneLineTravel(endLines[0], interChangeStation, endStation);
   };
 };
-
 
 
 

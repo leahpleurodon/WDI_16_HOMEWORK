@@ -1,0 +1,13 @@
+form{
+    max-width: 80%;
+    text-align: center;
+}
+input {
+    width: 40%;
+    height: 5vh;
+}
+
+button{
+    display: block;
+    margin: 2% auto;
+}

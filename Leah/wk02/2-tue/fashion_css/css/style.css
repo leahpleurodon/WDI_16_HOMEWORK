@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+p{
+    text-align: justify;
+    margin: 4% 0;
+}
+a{
+    text-decoration: none;
+    color: orangered;
+}
+main{
+    display: inline-block;
+    width:60%;
+    padding: 2%;
+    vertical-align: top;
+}
+aside{
+    display: inline-block;
+    width: 35%;
+    padding: 2%;
+    text-align: left;
+    vertical-align: top;
+}
+body > header nav ul{
+    height: 100%;
+    display: flex; 
+    text-align: center;
+    padding:0;
+}
+body > header nav li{
+    list-style: none;
+    margin:2px;
+    width: 100%;
+    background-color: black;
+    padding: 2vh 0;
+}
+body > header{
+    text-align: left;
+}
+body > header a{
+    color: white;
+}
+h1{
+    display: inline;
+    font-size: 7vh;
+    padding: 2%;
+    color:orangered;
+    font-weight: 300;
+}
+.slogan{
+    color: lightgray;
+    font-size: 4vh;
+}
+footer ul{
+    padding: 0;
+}
+footer li{
+    padding: 0 1%;
+}
+footer nav li{
+    display: inline;
+    border-right: 1px solid black;
+    padding-right: 1%;
+}
+footer nav li:first-child{
+    padding-left: 0
+}
+footer nav li:last-child{
+    border: none;
+}
+img{
+    max-width:100%;
+}
+section{
+    color: gray;
+}
+section p{
+    text-align: left;
+}
+section > footer , article > footer{
+    border-bottom: 1px solid gray;
+    padding-bottom: 4%;
+    text-align: right;
+    margin-bottom: 5%;
+}
+body > footer{
+    margin: 2%;
+    text-align: left;
+}
+.fancy{
+    font-size: 7vh;
+    color: lightgray;
+    text-align: left;
+    display: block;
+    float: left;
+    margin-right: 1%;
+    font-weight: 200;
+}
+h2{
+    margin: 1% 0;
+    text-align: left;
+    font-size: 4vh;
+    font-weight: 100;
+}
+h3{
+    font-weight: 100;
+    margin: 1% 0;
+    text-align: left;
+    font-size: 4vh;
+    color: lightgrey;
+}
