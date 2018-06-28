@@ -37,6 +37,9 @@ const withdraw= (amount, account)=>{
     account = account.toLowerCase();
     if (checkFunds(account, amount)){
         accounts[account] -= amount;
+        if (accounts[account] < 0.01){
+            accounts[account] = 0;
+        };
     };
     if (accounts[account] === 0){
         document.querySelector("." + account).style.backgroundColor = "mistyrose";
