@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>International Bank of Leah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Roboto+Mono:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <header>
+    <div class="logo">
+            <img src="angry-unhappy.png" alt="logo">
+    </div>
+    <h1>International Bank of Leah Online</h1>       
+    </header>
+    <div class="wrapper">
+        <div class="savings">
+            <h2>Savings</h2>
+            <h3>Current Balance:</h3>
+            <div class="balance" id="savings-balance">
+                $0.00
+            </div>
+            <div class="form">
+                <input type="number" class="amount-input" id="savings-input">
+                <div class="buttons">
+                        <button id="savings-withdraw">Withdraw</button>
+                        <button id="savings-deposit">Deposit</button>
+                </div>
+            </div>
+        </div>
+        <div class="checking">
+            <h2>Checking</h2>
+            <h3>Current Balance:</h3>
+            <div class="balance" id="checking-balance">
+                $0.00
+            </div>
+            <div class="form">
+                <input type="number" class="amount-input" id="checking-input">
+                <div class="buttons">
+                        <button id="checking-withdraw">Withdraw</button>
+                        <button id="checking-deposit">Deposit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ body{
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
+    margin: 3% 10%;
 }
 p{
     text-align: justify;
@@ -17,45 +18,43 @@ a{
 main{
     display: inline-block;
     width:60%;
-    padding: 2%;
+    margin: 2%;
     vertical-align: top;
 }
 aside{
     display: inline-block;
-    width: 35%;
-    padding: 2%;
+    width: 30%;
+    margin: 2%;
     text-align: left;
     vertical-align: top;
 }
-body > header nav ul{
+body > header nav {
     height: 100%;
     display: flex; 
     text-align: center;
     padding:0;
 }
-body > header nav li{
-    list-style: none;
-    margin:2px;
-    width: 100%;
-    background-color: black;
-    padding: 2vh 0;
-}
-body > header{
-    text-align: left;
-}
-body > header a{
-    color: white;
-}
 h1{
-    display: inline;
+    display: inline-block;
     font-size: 7vh;
-    padding: 2%;
     color:orangered;
     font-weight: 300;
+    margin: 2% 2% 2% 0;
 }
 .slogan{
     color: lightgray;
     font-size: 4vh;
+}
+body > header nav a{
+    list-style: none;
+    margin:2px;
+    flex:1;
+    background-color: black;
+    padding: 2vh 0;
+    color: white;
+}
+body > header{
+    text-align: left;
 }
 footer ul{
     padding: 0;

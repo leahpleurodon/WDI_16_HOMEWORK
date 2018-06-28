@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #A2A7A5;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    margin-bottom: 10vh;
+    text-align: left;
+}
+h1{
+    font-size: 4vw;
+    display: inline;
+    font-family: 'Playfair Display', serif;
+    color: #B6174B;
+}
+.logo{
+    display: inline;
+}
+img{
+    max-width: 10vw;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.savings{
+    border-radius: 6%;
+    margin: 5px;
+    min-height: 50vh;
+    max-width: 45vw;
+    background-color: whitesmoke;
+    flex: 1;
+    padding: 5vh 2vw;
+    box-shadow: 1vw 2vh rgba(127, 127, 127, 0.75);
+}
+.checking{
+    border-radius: 6%;
+    margin: 5px;
+    min-height: 50vh;
+    max-width: 45vw;
+    background-color: whitesmoke;
+    flex: 1;
+    padding: 5vh 2vw;
+    box-shadow: 1vw 2vh rgba(109, 105, 106, 0.75);
+}
+.balance{
+    margin-bottom: 5vh;
+    font-family: 'Roboto Mono', monospace;
+}
+button{
+    margin: 4vh 2vw;
+    font-size: 3vw;
+    border-radius: 2vh 0;
+    padding: 2%;
+    width: 15vw;
+    color: #B6174B;
+    box-shadow: 0.5vw 1vh rgba(109, 105, 106, 0.35);
+    border: 0;
+}
+input{
+    width: 85%;
+    height: 10vh;
+    font-size: 4vh;
+    text-align: center;
+    border: 0;
+}
