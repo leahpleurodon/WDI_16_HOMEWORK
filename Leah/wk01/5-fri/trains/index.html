@@ -7,13 +7,15 @@
   </head>
   <body>
     <p>Take the last train to Clarksville -> Try out the Journey Planner</p>
-    <form>
+    <div class="form">
       <h3>Enter Start Station</h3>
-      <input type="text" name="startStationInput" id="startStationInput">
+      <div class="autocomplete" style="width:300px;">
+        <input type="text" name="startStationInput" id="startStationInput">
+      </div>
       <h3>Enter End Station</h3>
-      <input type="text" name="startStationInput" id="startStationInput">
+      <input type="text" name="startStationInput" id="startStationInput" placeholder="station">
       <button id="submitButton">Plan My Journey</button>
-    </form>
+    </div>
     <script src="trains2.js" charset="utf-8"></script>
   </body>
 </html>

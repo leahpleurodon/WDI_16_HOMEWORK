@@ -4,9 +4,9 @@ let accounts ={
 };
 
 const savingsBox = document.querySelector(".savings");
-savingsBox.style.backgroundColor = "mistyrose";
+savingsBox.style.borderTop = "5vh solid crimson";
 const checkingBox = document.querySelector(".checking");
-checkingBox.style.backgroundColor = "mistyrose";
+checkingBox.style.borderTop = "5vh solid crimson";
 
 const savingsBalance = document.getElementById("savings-balance");
 const checkingBalance = document.getElementById("checking-balance");
@@ -29,7 +29,8 @@ const deposit= (amount, account)=>{
     account = account.toLowerCase();
     accounts[account] += amount;
     if (accounts[account] > 0){
-        document.querySelector("." + account).style.backgroundColor = "whitesmoke";
+        document.querySelector("." + account).style.backgroundColor = "white";
+        document.querySelector("." + account).style.borderTop = "5vh solid ForestGreen";
     }
 };
 
@@ -42,8 +43,8 @@ const withdraw= (amount, account)=>{
         };
     };
     if (accounts[account] === 0){
-        document.querySelector("." + account).style.backgroundColor = "mistyrose";
-    }
+        document.querySelector("." + account).style.borderTop = "5vh solid crimson";
+    };
 };
 
 savWithdrawBtn.addEventListener("click", ()=>{
@@ -65,4 +66,3 @@ chkDepositBtn.addEventListener("click", ()=>{
     deposit(Number(chkAmtInput.value),"checking");
     checkingBalance.innerText = "$" + accounts["checking"].toFixed(2);
 });
-
