@@ -33,9 +33,7 @@ const q1Checker = (answer) =>{
             q1Results.innerText = q1Results.innerText + 
             q1Answers[q1Answers.indexOf(answer)] + "\n";
             q1Input.value = "";
-            q1CorrectAnswers++;
-            console.log(q1CorrectAnswers);
-            
+            q1CorrectAnswers++;            
             if(q1CorrectAnswers === 5){
                 endQ1(true);
             };
@@ -51,12 +49,9 @@ const q2Checker = (answer) =>{
             q2Results.innerText = q2Results.innerText + 
             q2Answers[q2Answers.indexOf(answer)] + "\n";
             q2Input.value = "";
-            q2CorrectAnswers++;
-            console.log(q2CorrectAnswers);
-            
+            q2CorrectAnswers++;            
             if(q2CorrectAnswers === 10){
                 endQ2(true);
-                q2Results.style.backgroundColor = "lightgreen"
             };
         };    
     };
@@ -85,10 +80,11 @@ const endQ2 = (wonQuestion)=>{
     q1Input.disabled = false;
     q1Btn.disabled = false;
     if(!wonQuestion){
-        alert("Time is up for question 2."); 
-        q2Results.style.backgroundColor = "mistyrose";
+        alert("Im a loser... TIME UP"); 
+        q2Results.classList.add("unanswered")
     }else{
-        q2Results.style.backgroundColor = "lightgreen";
+        alert("goo goo gjoob... CORRECT");
+        q2Results.classList.add("answered");
     };
     activeTimer = undefined;
     activeCountDown = undefined;
@@ -102,10 +98,11 @@ const endQ1 = (wonQuestion)=>{
     q2Input.disabled = false;
     q2Btn.disabled = false;
     if(!wonQuestion){
-        alert("Time is up for question 1."); 
-        q1Results.style.backgroundColor = "mistyrose";
+        alert("Im a loser... TIME UP"); 
+        q1Results.classList.add("unanswered")
     }else{
-        q1Results.style.backgroundColor = "lightgreen";
+        alert("goo goo gjoob... CORRECT");
+        q1Results.classList.add("answered")
     };
     activeTimer = undefined;
     activeCountDown = undefined;
@@ -115,12 +112,11 @@ const endQ1 = (wonQuestion)=>{
 
 
 q1Btn.addEventListener("click", ()=>{
-    q2Results.style.backgroundColor = "whitesmoke";
     startTimer(1,29);
     activeTimer = setTimeout(endQ1, 30000);
     q1Results.innerText="";
     q1Input.addEventListener("keyup", () =>{
-        q1Checker(q1Input.value);
+        q1Checker(q1Input.value.trim());
     });
     q2Input.disabled = true;
     q2Btn.disabled = true;
@@ -129,12 +125,11 @@ q1Btn.addEventListener("click", ()=>{
 
 
 q2Btn.addEventListener("click", ()=>{
-    q2Results.style.backgroundColor = "whitesmoke";
     startTimer(2,89);
     activeTimer =  setTimeout(endQ2, 90000);
     q2Results.innerText="";
     q2Input.addEventListener("keyup", () =>{
-        q2Checker(q2Input.value);
+        q2Checker(q2Input.value.trim());
     });
     q1Input.disabled = true;
     q1Btn.disabled = true;
