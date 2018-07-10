@@ -7,21 +7,21 @@ def convert_temp(value, unit)
 
     if unit == "C"
         {
-            F: value * 1.8 + 32,
+            F: (value * 1.8 + 32).round(2),
             C: value,
             K:  value - 273.15
         }
     elsif unit == "K"
         {
-            F: 1.8 * (value - 273.15) + 32,
+            F: (1.8 * (value - 273.15) + 32).round(2),
             C: value + 273.15,
             K:  value
         }
     elsif unit == "F"
         {
             F: value,
-            C: (value - 32) * 0.5556,
-            K:  (value - 32) * 0.5556 - 273.15
+            C: ((value - 32) * 0.5556).round(2),
+            K: ((value - 32) * 0.5556 - 273.15 ).round(2)
         }
     else
         "Please select a valid unit"
