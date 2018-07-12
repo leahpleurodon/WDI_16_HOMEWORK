@@ -142,6 +142,9 @@ longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "
 def longest(array)
     array.group_by(&:size).max[1].sample
 
-end
+end #i prefer this method because you can get multiple values.
+
+#or
+array.max_by { |elem| elem.length}
 
 ```

@@ -140,7 +140,8 @@ users = {
 1. How would you return an array of Anil's favorite numbers that are also even?
 
 ```ruby
-    users["Anil"][:favourite_numbers].select {|num| num % 2 == 0}
+    users["Anil"][:favourite_numbers].select { |num| num.even? }
+    ##users["Anil"][:favourite_numbers].select(:&)
 ```
 
 1. How would you return an array of the favorite numbers common to all users?
@@ -151,6 +152,13 @@ users = {
         all_fav_nums.push(data[:favorite_numbers])
     end
     all_fav_nums.inject(:&)
+
+    #or
+
+    users.values.map { |hash| hash[:favorie_numbers] }.flatten.uniq.sort
+
+
+
 ```
 
 1. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
