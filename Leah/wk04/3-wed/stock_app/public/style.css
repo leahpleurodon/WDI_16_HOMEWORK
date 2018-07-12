@@ -9,7 +9,7 @@ header{
     margin-bottom: 10vh;
 }
 h1{
-    margin-bottom: 5vh;
+    margin: 4vh 10vw 5vh 0;
     font-family: 'Pacifico', sans-serif;
     color: hotpink;
 }
@@ -20,16 +20,15 @@ ul{
     text-align: center;
     display: flex;
     height: 7vh;
+    padding: 0;
 }
 li{
     flex:1;
     list-style: none;
-    
+    line-height: 7vh;
 }
 a{
-    vertical-align: middle;
     font-size: 3vh;
-    display: block;
     color: white;
 }
 a:visited{

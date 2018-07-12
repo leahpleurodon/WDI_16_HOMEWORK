@@ -1,0 +1,25 @@
+
+<% if @bottle_num < 1 %>
+    <section>
+        NO bottles of beer on the walll!!!!
+    </section>
+    <section>
+        NO bottles of beeeeeeeeeer.....
+    </section>
+    <a href="/">Start Again</a>
+<% else %>
+    <section>
+        <% (1..@bottle_num).to_a.each do %>
+            <img src="images/beer.png" alt="confused looking beer glass">
+        <% end %>
+    </section>
+    <section>
+        <%= @bottle_num %> bottle<%= "s" if @bottle_num > 1%> of beer on the walll!!!!
+    </section>
+    <section>
+        <%= @bottle_num %> bottle<%= "s" if @bottle_num > 1%> of beeeeeeeeeer.....        
+    </section>
+    <footer>
+        <a href="/<%= @bottle_num - 1 %>">Take one down and pass it around</a>
+    </footer>
+<% end %>
