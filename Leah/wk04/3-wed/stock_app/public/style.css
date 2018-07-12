@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 3vh;
+}
+header{
+    margin-bottom: 10vh;
+}
+h1{
+    margin-bottom: 5vh;
+    font-family: 'Pacifico', sans-serif;
+    color: hotpink;
+}
+
+ul{
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    height: 7vh;
+}
+li{
+    flex:1;
+    list-style: none;
+    
+}
+a{
+    vertical-align: middle;
+    font-size: 3vh;
+    display: block;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+input{
+    text-align: center;
+    display: block;
+    margin: 3vh auto;
+    height: 7vh;
+    font-size: 4.5vh;
+    border-radius: 5px 20px 5px;
+    border: 1px solid black;
+}
+button{
+    display: block;
+    font-family: 'Pacifico', sans-serif;
+    margin: 3vh auto;
+    height: 7vh;
+    font-size: 3vh;
+    color:hotpink;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0 2vw;
+    border-radius: 5px 20px 5px;
+}
+marquee{
+    margin: 3vh 10vw;
+}

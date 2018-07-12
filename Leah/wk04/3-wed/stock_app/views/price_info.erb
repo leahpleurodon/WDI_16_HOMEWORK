@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stock Price - With Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Stock price - <%= @stock.symbol if @stock != nil %></h1>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <% if @stock == nil %>
+        <p>Bro, that stock ticker doesn't exist</p>
+    <% else %>
+        <p>The price for <%= @stock.symbol %> : <%= @stock.company_name %> is $<%= @stock.close %></p>
+    <% end %>
+</body>
+</html>
