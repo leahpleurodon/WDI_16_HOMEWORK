@@ -1,5 +1,11 @@
 # HappiTails - Pet Shelter program
 
+## To Run the program
+
+run the following (using a relative path)
+
+`./app.rb`
+
 ## Problem Outline
 
 A pet shelter allows for adoption/surrender of animals.
