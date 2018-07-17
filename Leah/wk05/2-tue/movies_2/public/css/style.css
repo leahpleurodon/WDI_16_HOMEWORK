@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 5vh 0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vh;
+}
+nav{
+    margin: 2vh 0;
+    color: white;
+    background-color: black;
+    padding: 2vh 4vw;
+}
+nav a, nav a:visited{
+    color: white;
+    text-decoration: none;
+}
+.search{
+    text-align: center;
+    padding-bottom: 2.5vh;
+    border-bottom: 4px solid black;
+}
+input{
+    display: block;
+    width: 70vw;
+    height: 50px;
+    margin: 3vh auto;
+    font-size: 30px;
+}
+button{
+    display: block;
+    width: 30vw;
+    margin: 3vh auto;
+    height: 50px;
+    font-size: 30px;
+}
+.image{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    
+}
+.image img{
+    display: inline-block;
+    width: 100%;
+}
+h1{
+    margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 7vh;
+}
+h2{
+    margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 7vh;
+    padding-left: 2vw;
+}
+h3{
+    display: inline;
+    font-size: 3vh;
+}
+.subheading{
+    background-color: black;
+    color: white;
+    margin-bottom: 2vh;
+    font-size: 2.5vh;
+    display: flex;
+    text-align: center;
+    padding: 2vh 0;
+}
+.subheading li{
+    flex:1;
+    list-style: none;
+}
+.details{
+    vertical-align: top;
+    display: inline-block;
+    width: 70%;
+    font-size: 1.2em;
+}
+.details p{
+    padding-left: 2vw;
+}
+.basic-info{
+    padding: 2vh 0 2vh 2vw;
+    list-style: none;
+
+}
+.ratings{
+    margin: 2vh 0;
+    padding: 2vh 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    font-size: 0.8em;
+}
+.ratings li{
+    display: inline-block;
+    padding: 1vh 1vw;
+    flex:1;
+
+}
+h2{
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 4.5vw;
+    text-align: center;
+}
+.actors{
+    margin: 2vh 0;
+    padding: 2vh 4vw;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    font-size: 2.5vw;
+}
+.actors li{
+    flex:1;
+    padding: 0 2vw;
+}
+.oops{
+    margin: 2vh 0;
+    padding: 2vh 4vw;
+}

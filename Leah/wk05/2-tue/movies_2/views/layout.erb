@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Whats that movie?</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+  <h1>WHATS THAT MOVIE?!</h1>
+      <a href="/">Home</a>
+  </nav>
+  <div class="search">
+    <header>
+        <h1>Search t3h moofies</h1>
+    </header>
+    <form action="/search_results" method="get">
+        <input type="text"  name="movie_title">
+        <button type="submit">SOICHHH!</button>
+    </form>
+  </div>
+  <%= yield %>
+</body>
+</html>

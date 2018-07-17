@@ -1,0 +1,45 @@
+<% if @movie["Response"] == "True" %>
+    <div class="container">
+        <div class="image">
+            <% if @movie["Poster"] != "N/A" %>
+                <img src="<%=@movie["Poster"] %>" alt="<%= @movie["Title"] %>">
+            <% else %>
+                <img src="https://via.placeholder.com/400x600" alt="aint no picture">
+            <% end %>
+        </div><%#
+      %><div class="details">
+            <header>
+                <h2><%= @movie["Title"] %> (<%= @movie["Year"] %>)</h2>
+                <ul class="subheading">        
+                    <li><h3>Rated:</h3> <%= @movie["Rated"] %></li>
+                    <li><h3>Language:</h3> <%= @movie["Language"] %></li>
+                    <li><h3>Country:</h3> <%= @movie["Country"] %></li>
+                </ul>
+            </header>
+            <p><%= @movie["Plot"] %></p>
+            <ul class="basic-info">
+                <li><h3>Genre:</h3> <%= @movie["Genre"]%></li>
+                <li><h3>Released:</h3> <%= @movie["Released"] %></li>
+                <li><h3>Directed by:</h3> <%= @movie["Director"] %></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ratings">
+                <% @movie["Ratings"].each do |rating| %>
+                    <li><h3><%= rating["Source"] %>:</h3> <%= rating["Value"] %></li>
+                <% end %>
+            </ul>
+        </div>
+        <h2>Cast</h2>
+        <ul class="actors">
+            <% @movie["Actors"].split(", ").each do |actor| %>
+                <li><%= actor %></li>
+            <% end %>
+        </ul>
+    </div>
+
+<% else %>
+    <div class="oops">
+        That movie doesn't exist, you peanut....
+    </div>
+<% end %>

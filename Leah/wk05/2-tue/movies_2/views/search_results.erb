@@ -1,0 +1,9 @@
+<ul class="movie_list">
+    <% @movies_list.each do |movie| %>
+        <li>
+            <a href="/movie/<%= movie['imdbID'] %>">
+                <%= movie['Title'] %>
+            </a>
+        </li>
+    <% end %>
+</ul>
