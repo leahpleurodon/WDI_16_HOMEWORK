@@ -1,0 +1,44 @@
+<%# {"Title"=>"From Bollywood to Hollywood: The Making of 'Bride and Prejudice'", "Year"=>"2004", "Rated"=>"N/A", "Released"=>"14 Feb 2004", "Runtime"=>"N/A", "Genre"=>"Short, Crime", "Director"=>"Albert Sharpe", "Writer"=>"N/A", "Actors"=>"Gurinder Chadha, Martin Henderson, Aishwarya Rai Bachchan", "Plot"=>"N/A", "Language"=>"English", "Country"=>"UK", "Awards"=>"N/A", "Poster"=>"N/A", "Ratings"=>[{"Source"=>"Internet Movie Database", "Value"=>"6.5/10"}], "Metascore"=>"N/A", "imdbRating"=>"6.5", "imdbVotes"=>"24", "imdbID"=>"tt0491639", "Type"=>"movie", "DVD"=>"N/A", "BoxOffice"=>"N/A", "Production"=>"N/A", "Website"=>"N/A", "Response"=>"True"} %>
+
+
+<% if @movie["Response"] == "True" %>
+    <div class="container">
+        <div class="image">
+            <img src="<%=@movie["Poster"] %>" alt="<%= @movie["Title"] %>">
+        </div>
+        <div class="details">
+            <header>
+                <h1><%= @movie["Title"] %> (<%= @movie["Year"] %>)</h1>
+                <ul class="subheading">        
+                    <li><h3>Rated:</h3> <%= @movie["Rated"] %></li>
+                    <li><h3>Language:</h3> <%= @movie["Language"] %></li>
+                    <li><h3>Country:</h3> <%= @movie["Country"] %></li>
+                </ul>
+            </header>
+            <%= @movie["Plot"] %>
+            <ul class="basic-info">
+                <li><h3>Genre:</h3> <%= @movie["Genre"]%></li>
+                <li><h3>Released:</h3> <%= @movie["Released"] %></li>
+                <li><h3>Directed by:</h3> <%= @movie["Director"] %></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ratings">
+                <% @movie["Ratings"].each do |rating| %>
+                    <li><h3><%= rating["Source"] %>:</h3> <%= rating["Value"] %></li>
+                <% end %>
+            </ul>
+        </div>
+        <h2>Cast</h2>
+        <ul class="actors">
+            <% @movie["Actors"].split(", ").each do |actor| %>
+                <li><%= actor %></li>
+            <% end %>
+        </ul>
+    </div>
+
+<% else %>
+    <div class="oops">
+        The movie: <%= @movie_title %> doesn't exist, you peanut.... go back <a href="/">home</a> and try again.
+    </div>
+<% end %>

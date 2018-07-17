@@ -11,7 +11,7 @@ class ArgParser
         {
             adoption: [
                 {prompt: "Enter Animal Name", required: true, type: :animal},
-                {prompt: "shelter", required: true, type: :shelter},
+                {required: true, type: :shelter},
                 {prompt: "Select Client", required: true, type: :client}
             ],
             client: [
@@ -23,7 +23,7 @@ class ArgParser
             surrender: [
                 {prompt: "Enter Client last name(leave blank for anonymous)", required: true, type: :client},
                 {prompt: "Select Animal", required: true, type: :clientanimal},
-                {prompt: "shelter", required: true, type: :shelter},
+                {required: true, type: :shelter},
             ],
             animal: [
                 {prompt: "Enter Name", required: true, type: :string},
@@ -37,7 +37,7 @@ class ArgParser
     def get_user_args
         user_args = []
         self.creation_args[@class_name].each do |arg|
-            puts arg[:prompt] if arg[:type] != :shelter
+            puts arg[:prompt] if arg[:prompt]
             user_input = gets.chomp if arg[:type] != :clientanimal
             case arg[:type]
                 when :shelter
