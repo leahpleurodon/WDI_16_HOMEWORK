@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>T3h Moovies</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+  <header>
+    <h1>Search the movies...</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="search">
+      <form action="/search_results" method="get">
+        <input type="text" name="title">
+        <button>Search and Destroy</button>
+      </form>
+    </section>
+    <%= yield %>
+  </main>
+</body>
+</html>

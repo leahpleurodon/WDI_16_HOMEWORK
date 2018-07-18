@@ -1,0 +1,36 @@
+
+     <div class="container">
+        <div class="image">
+            <% if @movie["poster"] != "N/A" %>
+                <img src="<%=@movie["poster"] %>" alt="<%= @movie["title"] %>">
+            <% else %>
+                <img src="https://via.placeholder.com/400x600" alt="aint no picture">
+            <% end %>
+        </div>
+        <div class="details">
+            <header>
+                <h2><%= @movie["title"] %> (<%= @movie["year"] %>)</h2>
+                <ul class="subheading">        
+                    <li><h3>Rated:</h3> <%= @movie["rating"] %></li>
+                    <li><h3>Country:</h3> <%= @movie["country"] %></li>
+                </ul>
+            </header>
+            <p><%= @movie["plot"] %></p>
+            <ul class="basic-info">
+                <li><h3>Released:</h3> <%= @movie["released"] %></li>
+                <li><h3>Directed by:</h3> <%= @movie["director"] %></li>
+                <li><h3>Released:</h3> <%= @movie["runtime"] %> </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="ratings">
+
+            </ul>
+        </div>
+        <h2>Cast</h2>
+        <ul class="actors">
+            <% @actors.each do |actor| %>
+                <li><%= actor["actor_name"] %></li>
+            <% end %>
+        </ul>
+    </div>
