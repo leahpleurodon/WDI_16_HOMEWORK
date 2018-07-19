@@ -1,0 +1,10 @@
+<h2>Edit Moon</h2>
+<form action="/moon/<%= @moon.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= @moon.name %>">
+    <label for="photo_url">Photo URL</label>
+    <input type="text" name="photo_url" value="<%= @moon.photo_url %>">
+    <textarea name="blurb"><%= @moon.blurb %></textarea>
+    <button>Post</button>
+</form>

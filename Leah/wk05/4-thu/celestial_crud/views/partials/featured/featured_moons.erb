@@ -1,0 +1,8 @@
+<section class="featured">
+    <% @moons.each do |moon| %>
+        <section class="record">
+            <h2><%= moon.name %></h2>
+            <img class="thumb" src="<%= moon.photo_url %>" alt="<%= moon.name %>">
+        </section>
+    <% end %>   
+</section>

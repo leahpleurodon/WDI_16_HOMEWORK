@@ -1,0 +1,9 @@
+<h2>Galaxy</h2>
+    <% @galaxies.each do |galaxy| %>
+        <section class="record">
+            <h3><a href="/galaxy/<%= galaxy.id %>"><%= galaxy.name %></a></h3>
+            <a href="/galaxy/<%= galaxy.id %>">
+                <img class="thumb" src="<%= galaxy.photo_url %>" alt="<%= galaxy.name %>">
+            </a>
+        </section>
+    <% end %>  

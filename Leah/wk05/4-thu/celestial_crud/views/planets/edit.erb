@@ -1,0 +1,10 @@
+<h2>Edit Planet</h2>
+<form action="/planet/<%= @planet.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= @planet.name %>">
+    <label for="photo_url">Photo URL</label>
+    <input type="text" name="photo_url" value="<%= @planet.photo_url %>">
+    <textarea name="blurb"><%= @planet.blurb %></textarea>
+    <button>Post</button>
+</form>

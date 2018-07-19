@@ -1,0 +1,19 @@
+    <header>
+        <h2><%= @galaxy.name %></h2><span class="edit-delete"><a href="/galaxy/<%= @galaxy.id %>/edit">Edit Galaxy</a></span>
+    </header>
+    <section class="info">
+        <section class="image">
+            <img class="show" src="<%= @galaxy.photo_url %>" alt="<%= @galaxy.name %>">
+        </section>
+        <section class="blurb"></section>
+            <p><%= @galaxy.blurb %></p>
+        </section>
+        <section class="children">
+            <h3><%= @galaxy.name %>'s Planets</h3>
+            <ul>
+                <% @galaxy.planets.each do |planet| %>
+                    <li><a href="/planet/<%= planet.id %>"><%= planet.name %></h3></a></li>
+                <% end %>
+            </ul>
+        </section>
+    </section>

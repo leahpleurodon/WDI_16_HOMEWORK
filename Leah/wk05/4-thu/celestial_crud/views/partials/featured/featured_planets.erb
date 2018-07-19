@@ -1,0 +1,8 @@
+<section class="featured">
+    <% @planets.each do |planet| %>
+        <section class="record">
+            <h2><%= planet.name %></h2>
+            <img class="thumb" src="<%= planet.photo_url %>" alt="<%= planet.name %>">
+        </section>
+    <% end %>
+</section>

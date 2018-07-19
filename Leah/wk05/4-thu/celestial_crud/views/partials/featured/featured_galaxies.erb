@@ -1,0 +1,8 @@
+<section class="featured">
+    <% @galaxies.each do |galaxy| %>
+        <section class="record">
+            <h2><%= galaxy.name %></h2>
+            <img class="thumb" src="<%= galaxy.photo_url %>" alt="<%= galaxy.name %>">
+        </section>
+    <% end %>
+</section>
