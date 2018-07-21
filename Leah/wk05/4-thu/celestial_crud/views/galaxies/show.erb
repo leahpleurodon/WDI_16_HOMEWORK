@@ -1,5 +1,9 @@
+<section class="container"> 
     <header>
-        <h2><%= @galaxy.name %></h2><span class="edit-delete"><a href="/galaxy/<%= @galaxy.id %>/edit">Edit Galaxy</a></span>
+        <h3><%= @galaxy.name %></h3>
+        <% if logged_in? %>
+            <a href="/galaxy/<%= @galaxy.id %>/edit">Edit Galaxy</a>
+        <% end %>
     </header>
     <section class="info">
         <section class="image">
@@ -17,3 +21,4 @@
             </ul>
         </section>
     </section>
+</section>   

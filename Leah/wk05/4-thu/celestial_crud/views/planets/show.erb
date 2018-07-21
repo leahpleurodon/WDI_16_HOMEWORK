@@ -1,6 +1,10 @@
-<a href="/galaxy/<%= @planet.galaxy.id %>"><%= @planet.galaxy.name %></a>>
+<section class="container"> 
+    <a href="/galaxy/<%= @planet.galaxy.id %>"><%= @planet.galaxy.name %></a>>
     <header>
-        <h2><%= @planet.name %></h2><span class="edit-delete"><a href="/planet/<%= @planet.id %>/edit">Edit Planet</a></span>
+        <h3><%= @planet.name %></h3>
+        <% if logged_in? %>
+            <a href="/planet/<%= @planet.id %>/edit">Edit Planet</a>
+        <% end %>
     </header>
     <section class="info">
         <section class="image">
@@ -18,4 +22,4 @@
             </ul>
         </section>
     </section>
-
+</section>
