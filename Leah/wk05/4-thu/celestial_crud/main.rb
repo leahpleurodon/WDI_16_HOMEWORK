@@ -163,7 +163,7 @@ post '/galaxy' do
     galaxy.name = params[:name]
     galaxy.photo_url = params[:photo_url]
     galaxy.blurb = params[:blurb]
-    galaxy.features = false
+    galaxy.featured = false
     galaxy.save
   end
   redirect "/galaxies"
