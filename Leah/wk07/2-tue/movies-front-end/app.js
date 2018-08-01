@@ -69,6 +69,7 @@ const createPagination = (numResults) =>{
 
 
 queryBtn.addEventListener("click", ()=>{
+    pgnationDiv.innerHTML = "";
     var apiCall = 'http://www.omdbapi.com/?apikey=2f6435d9&s=' + queryInput.value;
     callApi(apiCall);
 });
