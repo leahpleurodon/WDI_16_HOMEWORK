@@ -21,7 +21,7 @@ $(".color-picker").on("submit",()=>{
     changeColor();
 })
 
-$("main").on("click",()=>{
+$("main").on("mouseover",()=>{
     $(event.target).css('background-color', hexColor);
 })
 
