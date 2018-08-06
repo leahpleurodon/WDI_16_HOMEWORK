@@ -1,4 +1,21 @@
+*{
+    box-sizing: border-box;
+}
 .color-indicator{
     height: 2vw;
     width: 2vw;
+}
+
+main{
+    height: 90vw;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+
+.pixel{
+    height: 9vw;
+    width: 9vw;
+    border: 0.5px solid black;
 }
