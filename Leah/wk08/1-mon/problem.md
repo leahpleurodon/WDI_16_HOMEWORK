@@ -38,3 +38,10 @@ Use the starter code and commit each step of the exercise.
 * Change the event that changes your box colors from 'click' to 'mouseover'
 
 ### Commit 7
+
+* add another form to allow users to pick a movie poster using the OMDB API.
+* set the background to the movie poster fetched from the api.
+
+### Commit 8
+
+* feel free to tweak the styling, the size and number of pixels to make it look pretty.
