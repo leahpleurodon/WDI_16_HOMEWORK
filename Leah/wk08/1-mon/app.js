@@ -18,6 +18,11 @@ const addPixels = () => {
 
 $(".color-picker").on("submit",()=>{
     event.preventDefault();
+    changeColor();
+})
+
+$("main").on("click",()=>{
+    $(event.target).css('background-color', hexColor);
 })
 
 addPixels();
