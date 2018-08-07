@@ -1,0 +1,12 @@
+<h1>Search for a movie to rate</h1>
+
+<form action="/" class="movie-search">
+    <input type="text" name="q" class="query-input">
+    <button type="submit">Search</button>
+</form>
+
+<div class="search-results">
+    <% @search_results.each do |movie| %>
+        <a href="/movies/<%= movie["imdbID"] %>"><%= movie["Title"] %> - (<%= movie["Year"] %>)</a>
+    <% end %>
+</div>

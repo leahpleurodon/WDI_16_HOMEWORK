@@ -12,7 +12,7 @@ const addPixels = () => {
     };
 };
 
-const onSuccess = (res) => {
+const makePosterDivs = (res) => {
     for (let i = 0; i < 5; i++) {
         let url = res.Search[i].Poster;
         $("footer").append(`<div class='poster-div' style="background-image:url(${url});" 
@@ -20,14 +20,14 @@ const onSuccess = (res) => {
     };
 };
 
-const addPosterOptions = () => {
+const callOMDB = () => {
     $.ajax({
         url: "http://www.omdbapi.com/",
         data:{
             apikey: "2f6435d9",
             s: "beatles"
         }
-      }).done(onSuccess);
+      }).done(makePosterDivs);
 };
 
 $("footer").on("click",()=>{
@@ -45,4 +45,4 @@ $("main").on("mouseover",()=>{
 })
 
 addPixels();
-addPosterOptions();
+callOMDB();
