@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+main{
+    display: flex;
+}
+main>section{
+    flex:1;
+    max-height: 40vh;
+    text-align: center;
+}
+h2{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 2em;
+    margin: 3vh 3vw;
+}
+button, input{
+    height: 6vh;
+    font-size: 0.9em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+button, input{
+    background: none;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+button:hover{
+    border-top: 2px solid lightgreen;
+    border-bottom: 2px solid lightgreen;
+    color: lightgreen;
+}
+.deposit{
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    color: green;
+}
+.withdraw{
+    border-top: 2px solid crimson;
+    border-bottom: 2px solid crimson;
+    color: crimson;
+}
+.show-history{
+    border-top: 2px solid darkcyan;
+    border-bottom: 2px solid darkcyan;
+    color: darkcyan;
+}
+.teller>*{
+    display:block;
+    text-align: center;
+    margin: 3vh auto;
+    width: 40vw;
+}
+.history{
+    overflow-y: auto;
+    max-height: 100%
+}
